@@ -4,6 +4,6 @@ import { completedActivity } from "./events.ts";
 
 test("serializes completed activity", () => {
   assert.deepEqual(JSON.parse(JSON.stringify(completedActivity())), {
-    type: "activity.completed", activityId: "fixture-1",
+    type: "activity.succeeded", activityId: "fixture-1",
   });
 });
