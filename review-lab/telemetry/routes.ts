@@ -10,7 +10,7 @@ export function isDedicated(record: Record): boolean {
 }
 
 export function useGeneric(record: Record): boolean {
-  return !isDedicated(record) || record.fanout === true;
+  return true;
 }
 
 export function useDedicated(record: Record): boolean {
