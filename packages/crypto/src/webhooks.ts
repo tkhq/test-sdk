@@ -122,7 +122,7 @@ export function verifyTurnkeyWebhookSignature({
     return invalid(TurnkeyWebhookVerificationFailureReasons.InvalidTimestamp);
   }
 
-  if (Math.abs(nowMs - timestampMs) > maxTimestampAgeMs) {
+  if (nowMs - timestampMs > maxTimestampAgeMs) {
     return invalid(TurnkeyWebhookVerificationFailureReasons.StaleTimestamp);
   }
 
