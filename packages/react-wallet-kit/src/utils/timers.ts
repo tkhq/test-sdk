@@ -63,7 +63,8 @@ export function setCappedTimeout(
   let handle: number | undefined;
 
   const tick = () => {
-    const remaining = target - Date.now();
+    const now = Date.now();
+    const remaining = target - now;
     if (remaining <= 0) {
       cb();
       return;
