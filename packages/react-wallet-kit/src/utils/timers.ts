@@ -68,7 +68,7 @@ export function setCappedTimeout(
       cb();
       return;
     }
-    handle = window.setTimeout(tick, Math.min(MAX_DELAY_MS, remaining));
+    handle = window.setTimeout(tick, Math.min(MAX_DELAY_MS, toIntMs(delayMs)));
   };
 
   tick();
